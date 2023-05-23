@@ -8,4 +8,4 @@ export const getCryptoTransactions = () => {
     category: 'cable-purchase',
   };
   return data;
-};
+}; // should return list of transactions instead

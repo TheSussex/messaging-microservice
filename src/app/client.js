@@ -1,4 +1,5 @@
 const amqp = require('amqplib/callback_api');
+const { loggers } = require('winston');
 
 amqp.connect('amqp://localhost', (error0, connection) => {
   if (error0) {
@@ -14,7 +15,7 @@ amqp.connect('amqp://localhost', (error0, connection) => {
       type: 'updateTransactions',
       clientId: 'client-132346',
       walletAddress: '0x46F7B7774AFA0CB9C2C970E7CB43957849730176',
-      transactionId: 'trans-12345677',
+      transactionId: 'trans-12345671',
       currencyType: 'ethers',
     };
 
@@ -23,7 +24,7 @@ amqp.connect('amqp://localhost', (error0, connection) => {
     });
     channel.sendToQueue(queue, Buffer.from(JSON.stringify(queueData)));
 
-    console.log(' [x] Sent %s', queueData);
+    loggers.info('[x] Sent %s', queueData);
   });
   setTimeout(() => {
     connection.close();

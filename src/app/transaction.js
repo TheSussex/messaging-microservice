@@ -23,7 +23,7 @@ amqp.connect('amqp://localhost', (error0, connection) => {
     logger.info('[*] Waiting for messages in transactions. To exit press CTRL+C');
 
     channel.consume(queue, async (msg) => {
-      logger.info(' [x] Received %s', msg.content.toString());
+      logger.info('[x] Received %s', msg.content.toString());
 
       const {
         type, clientId, transactionId, walletAddress, currencyType,
@@ -49,7 +49,7 @@ amqp.connect('amqp://localhost', (error0, connection) => {
 
         // publish event to event bus
         const newTransactionData = { type: 'newTransaction', ...cryptoTxResponse };
-        // PublishToEventBus(newTransactionData); // hypotheethical event bus publishing
+        // PublishToEventBus(newTransactionData); // hypotheethical event bus
       }
     }, {
       noAck: true,
