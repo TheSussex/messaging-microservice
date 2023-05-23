@@ -1,0 +1,9 @@
+{
+    "defaultEnv": {
+      "ENV": "NODE_ENV"
+    },
+    "development": {
+      "ENV": "DATABASE_URL"
+    },
+    "sql-file" : true
+  }

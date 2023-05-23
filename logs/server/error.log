@@ -1,0 +1,27 @@
+23/05/2023, 12:37:55:[31merror[39m: [31muncaughtException: insert or update on table "transactions" violates foreign key constraint "transactions_request_id_fkey"[39m
+[31merror: insert or update on table "transactions" violates foreign key constraint "transactions_request_id_fkey"[39m
+[31m    at Parser.parseErrorMessage (/Users/thesussex/Desktop/thesussex/Projects/messaging-microservice/node_modules/pg-protocol/src/parser.ts:369:69)[39m
+[31m    at Parser.handlePacket (/Users/thesussex/Desktop/thesussex/Projects/messaging-microservice/node_modules/pg-protocol/src/parser.ts:188:21)[39m
+[31m    at Parser.parse (/Users/thesussex/Desktop/thesussex/Projects/messaging-microservice/node_modules/pg-protocol/src/parser.ts:103:30)[39m
+[31m    at Socket.<anonymous> (/Users/thesussex/Desktop/thesussex/Projects/messaging-microservice/node_modules/pg-protocol/src/index.ts:7:48)[39m
+[31m    at Socket.emit (node:events:390:28)[39m
+[31m    at Socket.emit (node:domain:475:12)[39m
+[31m    at addChunk (node:internal/streams/readable:315:12)[39m
+[31m    at readableAddChunk (node:internal/streams/readable:289:9)[39m
+[31m    at Socket.Readable.push (node:internal/streams/readable:228:10)[39m
+[31m    at TCP.onStreamRead (node:internal/stream_base_commons:199:23)[39m
+[31mFrom previous event:[39m
+[31m    at promise (/Users/thesussex/Desktop/thesussex/Projects/messaging-microservice/node_modules/pg-promise/lib/promise-parser.js:30:20)[39m
+[31m    at Database.$query (/Users/thesussex/Desktop/thesussex/Projects/messaging-microservice/node_modules/pg-promise/lib/query.js:145:12)[39m
+[31m    at Database.<anonymous> (/Users/thesussex/Desktop/thesussex/Projects/messaging-microservice/node_modules/pg-promise/lib/query.js:277:23)[39m
+[31m    at /Users/thesussex/Desktop/thesussex/Projects/messaging-microservice/node_modules/pg-promise/lib/database.js:333:42[39m
+[31m    at processImmediate (node:internal/timers:464:21)[39m
+[31mFrom previous event:[39m
+[31m    at Database.query (/Users/thesussex/Desktop/thesussex/Projects/messaging-microservice/node_modules/pg-promise/lib/database.js:331:14)[39m
+[31m    at Database.oneOrNone (/Users/thesussex/Desktop/thesussex/Projects/messaging-microservice/node_modules/pg-promise/lib/database.js:684:33)[39m
+[31m    at saveNewTransaction (/Users/thesussex/Desktop/thesussex/Projects/messaging-microservice/src/app/services.js:6:51)[39m
+[31m    at channel.consume.noAck (/Users/thesussex/Desktop/thesussex/Projects/messaging-microservice/src/app/transaction.js:48:33)[39m
+23/05/2023, 12:39:17:[31merror[39m: [31muncaughtException: requestId is not iterable[39m
+[31mTypeError: requestId is not iterable[39m
+[31m    at channel.consume.noAck (/Users/thesussex/Desktop/thesussex/Projects/messaging-microservice/src/app/transaction.js:46:30)[39m
+23/05/2023, 12:41:01:[31merror[39m: [31m[*] Request Log already exist[39m
