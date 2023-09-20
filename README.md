@@ -1,5 +1,3 @@
-# backdrop-challenge
-
 
 ## Description
 Simple microservice that handles the grunt work of checking for transaction updates for each of user’s crypto wallets. Node.js Express API.
